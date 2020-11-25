@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://Aquari:aquari123@cluster0.20c0q.mongodb.net/cluster0?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}
