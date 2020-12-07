@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import AuthContext from '../../context/auth/authContext';
 
 const Navbar = ({ title, icon }) => {
+	const authContext = useContext(AuthContext)
+	const {isAuthenticated, logout, user} = authContext
+
 	return (
 		<div class='navbar bg-primary'>
 			<h1>
