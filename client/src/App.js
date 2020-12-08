@@ -9,6 +9,7 @@ import Login from './components/auth/Login';
 import ContactState from './context/contact/ContactState';
 import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
+import PrivateRoute from './components/routing/PrivateRoute';
 import setAuthToken from './utils/setAuthToken';
 import './App.css';
 
@@ -27,7 +28,7 @@ const App = () => {
 							<div className='container'>
 								<Alerts />
 								<Switch>
-									<Route exact path='/' component={Home} />
+									<PrivateRoute exact path='/' component={Home} />
 									<Route exact path='/about' component={About} />
 									<Route exact path='/register' component={Register} />
 									<Route exact path='/login' component={Login} />
