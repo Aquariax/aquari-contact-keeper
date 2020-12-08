@@ -10,7 +10,7 @@ const Register = (props) => {
 
 	const { register, error, clearErrors, isAuthenticated } = authContext;
 
-	useEffect(() => {
+	useEffect((props) => {
 		if (isAuthenticated) {
 			props.history.push('/');
 		}
