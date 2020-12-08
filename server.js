@@ -13,7 +13,7 @@ app.use('/api/auth', require('./routes/auth'));
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
-	app.get('*', res, (res) =>
+	app.get('*', (res) =>
 		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 	);
 }
